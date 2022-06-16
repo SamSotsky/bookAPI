@@ -23,7 +23,7 @@ public class MainController {
 	
 	@RequestMapping("/")
 	public String redirectMe() {
-		return "redirect;/books";
+		return "redirect:/books";
 	}
 	
 	@RequestMapping("/books")
@@ -41,6 +41,6 @@ public class MainController {
 		Book book = bookService.findBook(id);
 		
 		model.addAttribute("book", book);
-		return "oneBook.jsp";
+		return "/books/oneBook.jsp";
  }
 }
